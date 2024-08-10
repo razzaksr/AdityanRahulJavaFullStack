@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- User defined beans -->
+    <bean id="axis1" class="org.inversion.Insurance">
+        <property name="insuranceId" value="654" />
+        <property name="insuranceName" value="Axis HealthKit" />
+        <property name="insuranceDuration" value="2" />
+        <property name="insuranceAmount" value="450000" />
+        <property name="insuranceType" value="Health Insurance" />
+    </bean>
+    <bean id="icici1" class="org.inversion.Insurance">
+        <property name="insuranceId" value="876" />
+        <property name="insuranceName" value="ICICI HealthPro" />
+        <property name="insuranceDuration" value="1" />
+        <property name="insuranceAmount" value="500000" />
+        <property name="insuranceType" value="Health Insurance" />
+    </bean>
+    <bean id="canara" class="org.inversion.Insurance">
+        <constructor-arg index="1" value="Canara Plus" />
+        <constructor-arg index="0" value="992"/>
+        <constructor-arg index="2" value="Term Insurance"/>
+        <constructor-arg index="3" value="4"/>
+        <constructor-arg index="4" value="200000"/>
+    </bean>
+</beans>

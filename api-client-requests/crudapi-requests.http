@@ -1,0 +1,36 @@
+GET http://localhost:8082/card/customers
+
+###
+
+GET http://localhost:8082/card/one/876545678
+
+###
+
+POST http://localhost:8082/card/new
+Content-Type: application/json
+
+{
+  "cardNumber": 99999999999,
+  "cardAvailable": 100000,
+  "cardPin": 4331
+}
+
+###
+
+PUT http://localhost:8082/card/alter
+Content-Type: application/json
+
+{
+    "cardNumber": 874567654,
+    "cardAvailable": 81000,
+    "cardPin": 1911
+}
+
+###
+
+#DELETE http://localhost:8082/card/erase/8765434567654
+
+DELETE http://localhost:8082/card/erase
+Content-Type: application/json
+
+8765434567654

@@ -13,6 +13,26 @@ public class CardDbApi {
     @Autowired
     CardService cardService;
 
+    @DeleteMapping("/remove/hql/{limit}")
+    public String eraseByHql(@PathVariable("limit") int limit){
+        return cardService.removingByHQL(limit);
+    }
+
+    @DeleteMapping("/remove/key/{id}")
+    public String eraseById(@PathVariable("id") long id){
+        return cardService.removingById(id);
+    }
+
+    @DeleteMapping("/remove")
+    public String eraseByObject(@RequestBody Creditcard creditcard){
+        return cardService.removingByObject(creditcard);
+    }
+
+    @GetMapping("/sql/{value}")
+    public List<Creditcard> readManyBySqlLimit(@PathVariable("value") int value){
+        return cardService.fetchManyBySqlLimit(value);
+    }
+
     @GetMapping("/lesser/{value}")
     public List<Long> readManyByLimitLt(@PathVariable("value") int value){
         return cardService.fetchManyByLimitLt(value);

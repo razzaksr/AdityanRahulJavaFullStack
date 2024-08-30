@@ -11,6 +11,25 @@ public class CardService {
     @Autowired // dependency injection
     CardRepository cardRepository;
 
+    public String removingByHQL(int limit){
+        cardRepository.deleteByLimit(limit);
+        return limit+" matching cards are suspended";
+    }
+
+    public String removingById(long id){
+        cardRepository.deleteById(id);
+        return id+" has suspended permanently";
+    }
+
+    public String removingByObject(Creditcard creditcard){
+        cardRepository.delete(creditcard);
+        return creditcard.getCardNumber()+" has suspended permanently";
+    }
+
+    public List<Creditcard> fetchManyBySqlLimit(int limit){
+        return cardRepository.findAllBySqlAvailable(limit);
+    }
+
     public List<Long> fetchManyByLimitLt(int limit){
         return cardRepository.findAllByLesserAvailable(limit);
     }

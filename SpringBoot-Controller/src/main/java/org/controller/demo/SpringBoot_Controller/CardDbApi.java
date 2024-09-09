@@ -68,8 +68,12 @@ public class CardDbApi {
         return cardService.fetchService();
     }
 
+//    @PostMapping("/submit")
+//    public ResponseEntity savings(@RequestBody Creditcard creditcard){
+//        return ResponseEntity.ok().body(cardService.savingService(creditcard));
+//    }
     @PostMapping("/submit")
-    public ResponseEntity savings(@RequestBody Creditcard creditcard){
-        return ResponseEntity.ok().body(cardService.savingService(creditcard));
+    public Creditcard savings(@RequestBody Creditcard creditcard){
+        return cardService.savingService(creditcard);
     }
 }

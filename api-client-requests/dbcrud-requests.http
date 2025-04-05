@@ -1,12 +1,15 @@
 GET http://localhost:8082/api/show
+Authorization: Basic aditya:zealous
 
 ###
 
 GET http://localhost:8082/api/one/874567654
+Authorization: Basic aditya:zealous
 
 ###
 
 POST http://localhost:8082/api/submit
+Authorization: Basic aditya:zealous
 Content-Type: application/json
 
 {
@@ -18,27 +21,33 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8082/api/pin/4331
+Authorization: Basic aditya:zealous
 
 
 ###
 
 GET http://localhost:8082/api/limit/25000
+Authorization: Basic aditya:zealous
 
 ###
 
-GET http://localhost:8082/api/greater/50000
+GET http://localhost:8082/api/greater/75000
+Authorization: Basic aditya:zealous
 
 ###
 
 GET http://localhost:8082/api/lesser/50000
+Authorization: Basic aditya:zealous
 
 ###
 
 GET http://localhost:8082/api/sql/50000
+Authorization: Basic aditya:zealous
 
 ###
 
 DELETE http://localhost:8082/api/remove
+Authorization: Basic aditya:zealous
 Content-Type: application/json
 
 {
@@ -50,10 +59,12 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:8082/api/remove/key/3477346734
+Authorization: Basic aditya:zealous
 
 ###
 
-DELETE http://localhost:8082/api/remove/hql/25000
+DELETE http://localhost:8082/api/remove/hql/60000
+Authorization: Basic aditya:zealous
 
 ###
 
@@ -73,6 +84,7 @@ DELETE http://localhost:8082/api/remove/hql/25000
 #DELETE http://localhost:8082/card/erase/8765434567654
 
 DELETE http://localhost:8082/card/erase
+Authorization: Basic aditya:zealous
 Content-Type: application/json
 
 8765434567654
